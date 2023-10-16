@@ -1,4 +1,4 @@
-use yew_app::app::App;
+use yew_sidebar::app::App;
 
 // This is the entry point for the web app
 fn main() {

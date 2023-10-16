@@ -5,6 +5,8 @@ pub mod about;
 pub mod home;
 
 use crate::components::nav::Nav;
+use crate::components::sidebar::Sidebar;
+
 use about::About;
 use home::Home;
 
@@ -34,8 +36,9 @@ pub fn switch(routes: AppRoute) -> Html {
 pub fn app() -> Html {
     html! {
         <HashRouter>
-            <div class="flex min-h-screen flex-col">
+            <div class="flex flex-col min-h-screen">
                 <Nav />
+                <Sidebar />
                 <Switch<AppRoute> render={switch} />
             </div>
         </HashRouter>

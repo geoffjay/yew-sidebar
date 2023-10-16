@@ -1,12 +1,12 @@
 [package]
-authors = ["You <you@example.com>"]
+authors = ["Geoff Johnson <geoff.jay@gmail.com>"]
 categories = ["wasm"]
-description = "My awesome Yew app."
+description = "Sidebar drawer example for Yew"
 edition = "2021"
 license = "Apache-2.0/MIT"
-name = "yew-app"
+name = "yew-sidebar"
 readme = "./README.md"
-repository = "https://github.com/jetli/create-yew-app.git"
+repository = "https://github.com/geoffjay/yew-sidebar.git"
 version = "0.1.0"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
@@ -15,7 +15,8 @@ version = "0.1.0"
 log = "0.4"
 serde = "1"
 reqwest = { version = "0.11.13", features = ["json"] }
-yew = { version = "0.20.0", features = ["csr"] }
+yew = { version = "0.21.0", features = ["csr"] }
+yewdux = "0.9.4"
 yew-router = "0.17.0"
 yew-hooks = "0.2.0"
 wasm-bindgen = "0.2"
