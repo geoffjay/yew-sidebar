@@ -16,3 +16,7 @@ node_modules
 /pkg
 /wasm-pack.log
 .cache
+
+# SSH keys generated for deployment
+gh-pages
+gh-pages.pub
