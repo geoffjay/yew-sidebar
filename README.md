@@ -1,22 +1,22 @@
-# My Awesome Yew App
+# Yew Sidebar Drawer Example
 
-This is the official base template for [Create Yew App](https://github.com/jetli/create-yew-app).
+Created from the [Create Yew App](https://github.com/jetli/create-yew-app) template.
 
-## How to run in debug mode
+## Develop
 
 ```sh
 # Builds the project and opens it in a new browser tab. Auto-reloads when the project changes.
 trunk serve
 ```
 
-## How to build in release mode
+## Build for Release
 
 ```sh
 # Builds the project and places it into the `dist` folder.
 trunk build
 ```
 
-## How to run unit tests
+## Run Tests
 
 ```sh
 # Runs tests

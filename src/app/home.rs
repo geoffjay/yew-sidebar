@@ -8,6 +8,16 @@ use crate::store::State;
 pub fn home() -> Html {
     let onclick = Dispatch::<State>::new().reduce_mut_callback(|state| state.open_sidebar());
 
+    use_effect_with(
+        (),
+        move |_| {
+            Dispatch::<State>::new().reduce_mut(|state| {
+                state.set_sidebar_title("Home".to_string());
+            });
+            || {}
+        },
+    );
+
     html! {
         <div class="container text-center">
             <header class="space-y-8">
@@ -19,12 +29,21 @@ pub fn home() -> Html {
                         { "Reveal" }
                     </button>
                 </p>
-                <div class="flex flex-col items-center justify-center">
-                    <p class="w-64 h-64 border border-slate-200">{"stuff"}</p>
-                    <p class="w-64 h-64 border border-slate-200">{"stuff"}</p>
-                    <p class="w-64 h-64 border border-slate-200">{"stuff"}</p>
-                    <p class="w-64 h-64 border border-slate-200">{"stuff"}</p>
-                    <p class="w-64 h-64 border border-slate-200">{"stuff"}</p>
+                <div class="flex flex-col items-center justify-center gap-4">
+                    <p>
+                        { "Content to demonstrate scrolling that doesn't have an affect on the open drawer." }
+                    </p>
+                    <div class="bg-emerald-50  w-[512px] h-64 border rounded-md border-slate-600 drop-shadow-lg"></div>
+                    <div class="bg-emerald-100 w-[512px] h-64 border rounded-md border-slate-600 drop-shadow-lg"></div>
+                    <div class="bg-emerald-200 w-[512px] h-64 border rounded-md border-slate-600 drop-shadow-lg"></div>
+                    <div class="bg-emerald-300 w-[512px] h-64 border rounded-md border-slate-600 drop-shadow-lg"></div>
+                    <div class="bg-emerald-400 w-[512px] h-64 border rounded-md border-slate-600 drop-shadow-lg"></div>
+                    <div class="bg-emerald-500 w-[512px] h-64 border rounded-md border-slate-600 drop-shadow-lg"></div>
+                    <div class="bg-emerald-600 w-[512px] h-64 border rounded-md border-slate-600 drop-shadow-lg"></div>
+                    <div class="bg-emerald-700 w-[512px] h-64 border rounded-md border-slate-600 drop-shadow-lg"></div>
+                    <div class="bg-emerald-800 w-[512px] h-64 border rounded-md border-slate-600 drop-shadow-lg"></div>
+                    <div class="bg-emerald-900 w-[512px] h-64 border rounded-md border-slate-600 drop-shadow-lg"></div>
+                    <div class="bg-emerald-950 w-[512px] h-64 border rounded-md border-slate-600 drop-shadow-lg"></div>
                 </div>
             </header>
         </div>
